@@ -31,8 +31,8 @@ a_1 a_2 cost
 
 ## Constraints
 
-$$0 \leq n \leq 10^3$$  
-$$0 \leq x \leq 10^6$$  
+$$0 \leq n \leq 500$$  
+$$0 \leq x \leq 250000$$  
 $$0 \leq a_i \leq n$$  
 $$0 \leq cost \leq 10^3$$
 

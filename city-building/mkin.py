@@ -1,6 +1,5 @@
 import random
-n = random.randint(10, 1000)
-n = random.randint(3, 5)
+n = random.randint(10, 500)
 E = []
 for i in range(n):
     for j in range(i+1, n):

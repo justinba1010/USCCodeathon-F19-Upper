@@ -7,13 +7,13 @@ pushd $SCRIPT_DIR
 
   for i in {3..15}
   do
-    python3 ./mkin.py >> input/input$i;
-    python3 ./solutions/solution.py < input/input$i >> output/output$i
+    python3 ./mkin.py > input/input$i.txt;
+    python3 ./solutions/solution.py < input/input$i.txt > output/output$i.txt
   done
 
-  for i in {0..3}
+  for i in {0..2}
   do
-    python3 ./solutions/solution.py < input/input$i >> output/output$i
+    python3 ./solutions/solution.py < input/input$i.txt > output/output$i.txt
   done
 popd
 
