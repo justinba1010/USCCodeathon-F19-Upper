@@ -1,5 +1,4 @@
-# Copyright 2019 Justin Baum
-# No rights reserved, just dont plagiarize and whatever
+# Justin Baum
 # Kruskals Algorithm for Codeathon 2019 Fall
 # 240/350 Problem
 
