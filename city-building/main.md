@@ -5,8 +5,9 @@ so that every city is connected, but in the least amount of road possible. Note,
 not want to build a road between every city. Instead they want to build a
 network of roads, so that it is possible to get from any city to any other city.
 The country is on a budget, so they previously hired a Kruskal-ese Engineer, but
-his road system was too complex. Instead they want the shorted
-network that makes every city connected.
+his road system was too complex. Instead they want the shortest
+network that makes every city connected. It is assumed the cost to go from a
+city to itself is 0.
 
 ## Description
 
@@ -18,7 +19,8 @@ every city is connected to each other.
 The first line contains an integer $$n$$ and $$x$$, the number of cities, and
 the number of city to city roadsites that are accounted for.  
 Each line after will have two numbers denoting which two cities are being
-connected, and a length of road.
+connected, and the length of the road connecting those two cities.
+
 
 ```
 n x
