@@ -17,7 +17,7 @@ every city is connected to each other.
 ## Input
 
 The first line contains an integer $$n$$ and $$x$$, the number of cities, and
-the number of city to city roadsites that are accounted for.  
+the number of city to city connections that are possible(the number you will receive in the input).  
 Each line after will have two numbers denoting which two cities are being
 connected, and the length of the road connecting those two cities.
 
@@ -39,3 +39,22 @@ $$0 \leq cost \leq 10^3$$
 ## Output
 
 Print the cost of the shortest interconnected network.
+
+## Sample Input 1
+```
+4 6
+0 1 36
+1 2 72
+1 3 53
+0 2 56
+2 3 53
+0 3 52
+```
+
+## Picture for Sample 1
+
+
+## Sample Output 1
+```
+141
+```

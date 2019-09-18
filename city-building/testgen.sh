@@ -5,13 +5,13 @@ mkdir -p output
 
 pushd $SCRIPT_DIR
 
-  for i in {3..15}
+  for i in {2..15}
   do
     python3 ./mkin.py > input/input$i.txt;
     python3 ./solutions/solution.py < input/input$i.txt > output/output$i.txt
   done
 
-  for i in {0..2}
+  for i in {0..1}
   do
     python3 ./solutions/solution.py < input/input$i.txt > output/output$i.txt
   done
