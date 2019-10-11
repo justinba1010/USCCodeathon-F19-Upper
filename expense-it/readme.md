@@ -61,7 +61,7 @@ Standard Half Width Kana:
 ```
 
 ## Example
-###Input:
+### Input:
 ```
 $600.00 Rental Car
 ーかたんれ
@@ -77,7 +77,7 @@ $930.00 Hot Springs
 ンセマキデハトコルレスワモ泉温，バエ言ト所名ノ本日
 ```
 
-###Output:
+### Output:
 ```
 $600.00 Rental Car
 レンタカー
