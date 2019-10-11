@@ -18,12 +18,12 @@ An expense report consist of an unknown number $n$ entries begining with '$'.
 The '$' character will only appear as the first character of an entry. The
 following lines will contain a backwards descripton of $x$ characters between
 0 and 2^16 characters with 40 characters on each line. Hiragana characters are
-mapped to their Katakana counterparts あ → ア and Katakana are mapped to their
-Hiragana counterparts ア → あ. Finally the small half width kana are mapped to
-their standard half width kana counterparts ｧ → ｱ. Here is a helpful link to
-get you started https://en.wikipedia.org/wiki/Kana. The only Hiragana, 
-Katakana, and small half width Kana that will be used are in the character 
-list below.
+replaced with their Katakana counterparts あ → ア and Katakana are replaced with
+to their Hiragana counterparts ア → あ. Finally the small half width kana are
+replaced with their standard half width kana counterparts ｧ → ｱ. Here is a 
+helpful link to get you started https://en.wikipedia.org/wiki/Kana. The only
+Hiragana, Katakana, and small half width Kana that will be used are in the
+character list below.
 
 ```
 Hiragana characters:
