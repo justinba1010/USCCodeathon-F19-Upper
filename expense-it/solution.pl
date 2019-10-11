@@ -1,4 +1,7 @@
 #!/usr/bin/perl
+# Harrison Howell
+# Reverse-complement for Codeathon 2019 Fall
+# Upper Division
 
 use 5.026_001;
 use strict;
