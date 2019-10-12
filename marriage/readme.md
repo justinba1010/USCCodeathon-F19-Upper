@@ -8,6 +8,8 @@ Your goal is to maximize the total happiness for group 1 and make sure that ther
 
 Given everyone's happiness rating to everyone in the other groups, calculate the total happiness where no one is willing to leave with someone else who is also willing to leave.
 
+NOTE: It is guaranteed that a person will have unique happiness ratings with other people. In other terms, no one will have the same happiness for two people. (Not on the contest: This is necessary to prevent multiple max matchings for group 1, which would mean it would be necessary to check each max matching. This was not only from an excerpt on the Glen Shadely algorithm, but confirmed by many automated tests.)
+
 ## Input
 
 The first line will give the number $$n$$ of people in each group. The following n lines will contain each person's in group 1 happiness rating with each other person in group 2, in order. The following n lines will also contain each person's, this time in group 2, happiness rating with the people in group 1.
