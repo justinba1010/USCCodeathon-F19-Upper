@@ -1,5 +1,5 @@
 import random
-n = random.randint(0, 1000)
+n = random.randint(400, 500)
 
 print(n)
 for i in range(2*n):
