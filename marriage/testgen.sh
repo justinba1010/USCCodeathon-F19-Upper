@@ -14,7 +14,7 @@ pushd $SCRIPT_DIR
     echo $i
   done
 
-  for i in {1}
+  for i in {1..1}
   do
     python3 ./solutions/solution.py < input/input$i.txt > output/output$i.txt
   done

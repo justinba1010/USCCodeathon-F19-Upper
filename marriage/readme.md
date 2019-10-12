@@ -12,7 +12,7 @@ Given everyone's happiness rating to everyone in the other groups, calculate the
 
 The first line will give the number $$n$$ of people in each group. The following n lines will contain each person's in group 1 happiness rating with each other person in group 2, in order. The following n lines will also contain each person's, this time in group 2, happiness rating with the people in group 1.
 
-`g_i-p_j-pp_k` will designate group i's person j's happiness rating with the opposite group's person k.
+$$g_i-p_j-pp_k$$ will designate group i's person j's happiness rating with the opposite group's person k.
 
 ```
 n
@@ -27,8 +27,8 @@ g_2-p_n-pp_1 g_2-p_n-pp_2 ... g_2-p_n-pp_n
 ```
 
 ## Constraints
-$$0 \leq n \leq 1000$$
-$$0 \leq g_i-p_j-pp_k \leq 100$$
+$$0 \leq n \leq 500$$  
+$$0 \leq g_i-p_j-pp_k \leq 10000$$
 
 ## Output
 
