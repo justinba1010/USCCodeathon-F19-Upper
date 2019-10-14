@@ -8,7 +8,7 @@ Your goal is to maximize the total happiness for group 1 and make sure that ther
 
 Given everyone's happiness rating to everyone in the other groups, calculate the total happiness where no one is willing to leave with someone else who is also willing to leave.
 
-NOTE: It is guaranteed that a person will have unique happiness ratings with other people. In other terms, no one will have the same happiness for two people. (Not on the contest: This is necessary to prevent multiple max matchings for group 1, which would mean it would be necessary to check each max matching. This was not only from an excerpt on the Glen Shadely algorithm, but confirmed by many automated tests.)
+NOTE: It is guaranteed that a person will have unique happiness ratings with other people. In other terms, no one will have the same happiness for two people. (Not on the contest: This is necessary to prevent multiple max matchings for group 1, which would mean it would be necessary to check each max matching. This was not only from an excerpt on the Glen Shadely algorithm, but confirmed by many automated tests. **There needs to be unambiguous preferences in ordering for all participants for the Glen Shadely algorithm. This is accomplished by giving unique happiness ratings for each person.**
 
 ## Input
 
