@@ -13,6 +13,8 @@ The first line of a test case is $N$, the number of computers in the network.
 
 The next $N$ lines are a space-delineated series of numbers. The first number in the line, $n$, is the numeric ID of some computer in the network, and the remaining numbers on the line indicate the IDs of the computers to which $n$ has a direct link.
 
+There are $N$ computers in the network, and each computer has a numeric ID in the range $[0, N)$. These are always given in increasing order.
+
 # Constraints
 
 $2 \leq T \leq 10$
