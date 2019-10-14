@@ -21,4 +21,4 @@ $3 \leq N \leq 2^{16}$
 
 # Output Format
 
-$T$ lines, each line containing a comma separated list of numbers giving the indices of the weak points in the network for that test case. If a network has no weak points, this should be a blank line.
+$T$ lines, each line containing a space delineated list of numbers giving the indices of the weak points in the network for that test case. If a network has no weak points, this should be a blank line.
