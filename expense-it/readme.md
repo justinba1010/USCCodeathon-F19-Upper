@@ -1,33 +1,38 @@
 # Expense it!
 
-You've just returned from a sucessful startup seeding round in Tokyo. You had a
+## Description
+Fix your expense report and get your refund!
+
+## Problem Statement
+
+You've just returned from a successful startup seeding round in Tokyo. You had a
 lot of fun and spent a lot of company money. Now you need to submit your
-receipts for reimbursement (Don't worry, you should haave raised plenty of money
+receipts for reimbursement (Don't worry, you should have raised plenty of money
 to cover it). Thankfully, you have all of your expenses neatly organized in a
-text document. Naturally, the expense descriptions are in Japanese
-Unfortunately, that description is now backwards and all of the Hiragana
-characters have become Katakana characters and vice versa (It must of been the
+text document. Naturally, the expense descriptions are in Japanese.
+Unfortunately, that descriptions are now backwards and all of the Hiragana
+characters have become Katakana characters and vice versa (It must have been the
 shift in the time zone)... On top of that, the finance department requires all
 small half width kana to be replaced with standard half width kana because they
-are to hard to read. Fix your expense report quickly so you can afford to go on
+are too hard to read. Fix your expense report quickly so you can afford to go on
 your next trip!
 
-## Description
-
-An expense report consist of an unknown number $n$ entries begining with '$'.
-The '$' character will only appear as the first character of an entry. The
-following lines will contain a backwards descripton of $x$ characters between
-0 and 2^16 characters with 40 characters on each line. Hiragana characters are
-replaced with their Katakana counterparts あ → ア and Katakana are replaced with
-to their Hiragana counterparts ア → あ. Finally the small half width kana are
-replaced with their standard half width kana counterparts ｧ → ｱ. Here is a 
-helpful link to get you started https://en.wikipedia.org/wiki/Kana. The only
-Hiragana, Katakana, and small half width Kana that will be used are in the
-character list below.
+An expense report consist of up to 2^8 entries $n$. Each line of the
+report can be at most 40 characters. An entry starts with a price begining with
+'`$`' and will not appear anywhere else in the entry. The following lines
+will contain a backwards descripton of $x$ characters between 0 and 2^16
+characters. Hiragana characters are replaced with their Katakana counterparts
+あ → ア and Katakana are replaced with to their Hiragana counterparts ア → あ
+Finally you must replace small half width kana with their standard half width
+kana counterparts ｧ → ｱ. Here is a helpful link to get you started
+https://www.key-shortcut.com/en/writing-systems/ひらがな-japanese/
+The only Hiragana, Katakana, and small half width Kana that will be used are in
+the character list below.
 
 ```
 Hiragana characters:
 'あ' | 'い' | 'う' | 'え' | 'お' |
+'ぁ' | 'ぃ' | 'ぅ' | 'ぇ' | 'ぉ' |
 'か' | 'き' | 'く' | 'け' | 'こ' |
 'が' | 'ぎ' | 'ぐ' | 'げ' | 'ご' |
 'さ' | 'し' | 'す' | 'せ' | 'そ' |
@@ -40,10 +45,13 @@ Hiragana characters:
 'ぱ' | 'ぴ' | 'ぷ' | 'ぺ' | 'ぽ' |
 'ま' | 'み' | 'む' | 'め' | 'も' |
 'ら' | 'り' | 'る' | 'れ' | 'ろ' |
-'や' | 'ゆ' | 'よ' | 'わ' | 'ん'
+'や' | 'ゆ' | 'よ' | 'わ' | 'ゐ' |
+'ゃ' | 'ゅ' | 'ょ' | 'ゎ' | 'ゑ' |
+'を' | 'ん'
 
 Katakana characters:
 'ア' | 'イ' | 'ウ' | 'エ' | 'オ' |
+'ァ' | 'ィ' | 'ゥ' | 'ェ' | 'ォ' |
 'カ' | 'キ' | 'ク' | 'ケ' | 'コ' |
 'ガ' | 'ギ' | 'グ' | 'ゲ' | 'ゴ' |
 'サ' | 'シ' | 'ス' | 'セ' | 'ソ' |
@@ -56,7 +64,9 @@ Katakana characters:
 'パ' | 'ピ' | 'プ' | 'ペ' | 'ポ' |
 'マ' | 'ミ' | 'ム' | 'メ' | 'モ' |
 'ラ' | 'リ' | 'ル' | 'レ' | 'ロ' |
-'ヤ' | 'ユ' | 'ヨ' | 'ワ' | 'ン'
+'ヤ' | 'ユ' | 'ヨ' | 'ワ' | 'ヰ' |
+'ャ' | 'ュ' | 'ョ' | 'ヮ' | 'ヱ' |
+'ヲ' | 'ン'
 
 Small Half Width Kana:
 'ｧ' | 'ｨ' | 'ｩ' | 'ｪ' | 'ｫ'
@@ -64,9 +74,10 @@ Small Half Width Kana:
 Standard Half Width Kana:
 'ｱ' | 'ｲ' | 'ｳ' | 'ｴ' | 'ｵ'
 ```
+Note - Other standard half width kana besides the those listed will appear in the input.
+This is just to show which small characters must be replaced. The second to last entry in the example shows this in practice.
 
-## Example
-### Input:
+## Input Format
 ```
 $600.00 Rental Car
 ーかたんれ
@@ -82,7 +93,12 @@ $930.00 Hot Springs
 ンセマキデハトコルレスワモ泉温，バエ言ト所名ノ本日
 ```
 
-### Output:
+## Constraints
+Input is UTF-8
+$$1 \leq n \leq 256$$
+$$0 \leq x \leq 65536$$
+
+## Output Format
 ```
 $600.00 Rental Car
 レンタカー
@@ -97,5 +113,6 @@ $930.00 Hot Springs
 に温泉があります。たくさんある温泉の中で愛媛県松山市にある道後温泉は日本で一番古
 い温泉で３，０００年の歴史があるといわれています。
 ```
-
-
+Note - Hackerrank sample input and output cases will not display unicode. However,
+you can copy and paste the lines from "Input Format" into Test against custom Input
+to see if you're on the right track.
