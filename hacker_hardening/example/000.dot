@@ -1,0 +1,15 @@
+graph {
+    0 -- 1
+    0 -- 2
+    1 -- 2
+    2 -- 3
+    3 -- 4
+    3 -- 5
+    4 -- 5
+    rankdir="LR"
+
+    { rank="same"; 0 1 }
+    { rank="same"; 2 }
+    { rank="same"; 3 }
+    { rank="same"; 4 5 }
+}
