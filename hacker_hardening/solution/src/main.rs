@@ -8,10 +8,8 @@ fn main() {
     // Unwrap, assuming input is always in a valid form.
     let mut lines_iter = buffered_stdin.lines().map(|l| l.unwrap());
 
-    // Unwrap, assuming input is always in a valid form.
     let t = lines_iter.next().unwrap().parse::<usize>().unwrap();
 
-    // For each test case...
     for _ in 0..t {
         // The number of nodes in the graph; also the number of lines in this
         // test case.
@@ -20,7 +18,7 @@ fn main() {
         let mut articulation_points = graph.count_biconnected();
         articulation_points.sort();
         for (idx, pt) in articulation_points.iter().enumerate() {
-            if idx != 0 { print!(", ") };
+            if idx != 0 { print!(" ") };
             print!("{}", pt);
         }
         println!();
@@ -61,7 +59,9 @@ mod graph {
             let mut depths  = vec![-1; self.nodes.len()];
             let mut low_pts  = vec![-1; self.nodes.len()];
             let mut visited = vec![false; self.nodes.len()];
+
             let mut idx_stack = vec![0];
+
             let mut depth = 1;
             let mut articulation_pts = Vec::new();
             let mut children = vec![Vec::new(); self.nodes.len()];
