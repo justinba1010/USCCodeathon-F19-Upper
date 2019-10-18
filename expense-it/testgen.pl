@@ -8,9 +8,7 @@ use strict;
 use warnings;
 use utf8;
 
-my $cases = 3;
-my @entries = (3, 10, 2**8);
-my @range = (6, 10, 12);
+my $cases = 15;
 
 my @desc_chars = map(chr, ord("\N{U+3041}")..ord("\N{U+3093}"));
 push(@desc_chars, (map(chr, ord("\N{U+30A1}")..ord("\N{U+30F3}"))));
@@ -32,11 +30,11 @@ foreach (1..$cases) {
 
   srand($_);
 
-  foreach my $entry (1..$entries[$_-1]) {
+  foreach my $entry (1..$_*2) {
     print FILE_OUT "\$$entry.00 Entry $entry for $file\n";
 
     my $desc;
-    $desc .= $desc_chars[rand @desc_chars] for 1..2**(int(rand($range[$_-1])));
+    $desc .= $desc_chars[rand @desc_chars] for 1..2**(int(rand($_)));
     for (my $i = 0; $i < length($desc); $i += 40) {
       print FILE_OUT substr($desc, $i, 40), "\n";
     }
@@ -44,8 +42,7 @@ foreach (1..$cases) {
 
   `perl ./solutions/solution.pl <./input/input$file >./output/output$file`;
   die("$!") if ($? >> 8 != 0);
-  `rm -rf ./case0$_.zip`;
- close FILE_OUT;
+  close FILE_OUT;
 }
 
 srand(++$cases);
